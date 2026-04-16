@@ -2,7 +2,7 @@ function [r, v] = coe2rv(a, e, Omega, i, omega, theta, mu)
 
 p = a*(1-e^2);
 r_pf = p/(1+e*cos(theta)) * [cos(theta); sin(theta); 0];
-v_pf =  sqrt(mu/p) * [-sin(theta); cos(theta); 0];
+v_pf =  sqrt(mu/p) * [-sin(theta); e + cos(theta); 0];
 
 R3_Omega = [cos(Omega) sin(Omega) 0;
     -sin(Omega) cos(Omega) 0;
